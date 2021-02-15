@@ -15,6 +15,10 @@
 
   <title>Frontend Mentor | Profile card component</title>
 
+  <meta name='viewport'
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0,
+     user-scalable=0' >
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     /**************************TAG SELECTORS*****************/
@@ -48,31 +52,6 @@
       top: 50%;
     }
 
-    @media (max-width: 375px) {
-      .bg-pattern-top {
-        right: 50%;
-        position: absolute;
-        width: 750px;
-        bottom: 50%;
-      }
-
-      .bg-pattern-bottom {
-        position: absolute;
-        left: 50%;
-        width: 750px;
-        top: 50%;
-      }
-      body {
-        background-color: hsl(185, 75%, 39%);
-        font-size: 18px;
-        font-family: 'Kumbh Sans', sans-serif;
-        overflow: hidden;
-        margin: 0;
-        height: 100%;
-        /* text-align: center; */
-      }
-    }
-
     /* card */
     .card {
       background-color: #fff;
@@ -90,12 +69,6 @@
       margin: auto;
     }
 
-    @media (max-width: 375px) {
-      .card {
-        width: 90%;
-      }
-    }
-
     .card-body {
       position: absolute;
       display: block;
@@ -106,7 +79,7 @@
       bottom: 0;
     }
 
-    .footer{
+    .footer {
       margin-top: 7%;
     }
 
@@ -179,43 +152,72 @@
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+
+    @media (max-width: 375px) {
+      .bg-pattern-top {
+        right: 50%;
+        position: absolute;
+        width: 750px;
+        bottom: 50%;
+      }
+
+      .bg-pattern-bottom {
+        position: absolute;
+        left: 50%;
+        width: 750px;
+        top: 50%;
+      }
+
+      .card {
+        width: 90%;
+      }
+
+      .body-div{
+        overflow: hidden;
+        margin: 0;
+        height: 100%;
+      }
+
+    }
   </style>
 </head>
 
 <body>
-  <img class="background-pattern bg-pattern-top" src="images/bg-pattern-top.svg" alt="bg-pattern-top">
-  <img class="background-pattern bg-pattern-bottom" src="images/bg-pattern-bottom.svg" alt="bg-pattern-bottom">
-  <div class="card">
-    <img class="bg-pattern-card" src="images/bg-pattern-card.svg" alt="bg-pattern-card">
-    <div class="card-body">
-      <img class="image-victor" src="images/image-victor.jpg" alt="image-victor">
-      <p class="name-age"><span class="name">Victor Crest</span><span class="age">26</span></p>
-      <p class="city">London</p>
+  <div class="body-div">
+    <img class="background-pattern bg-pattern-top" src="images/bg-pattern-top.svg" alt="bg-pattern-top">
+    <img class="background-pattern bg-pattern-bottom" src="images/bg-pattern-bottom.svg" alt="bg-pattern-bottom">
+    <div class="card">
+      <img class="bg-pattern-card" src="images/bg-pattern-card.svg" alt="bg-pattern-card">
+      <div class="card-body">
+        <img class="image-victor" src="images/image-victor.jpg" alt="image-victor">
+        <p class="name-age"><span class="name">Victor Crest</span><span class="age">26</span></p>
+        <p class="city">London</p>
 
-      <hr>
+        <hr>
 
-      <div class="footer">
-        <table class="social-figures">
-          <tr>
-            <td>80K</td>
-            <td>803k</td>
-            <td>1.4k</td>
-          </tr>
-        </table>
-        <table class="social">
-          <tr>
-            <td>Followers</td>
-            <td class="likes">Likes</td>
-            <td class="photo">Photos</td>
-          </tr>
-        </table>
+        <div class="footer">
+          <table class="social-figures">
+            <tr>
+              <td>80K</td>
+              <td>803k</td>
+              <td>1.4k</td>
+            </tr>
+          </table>
+          <table class="social">
+            <tr>
+              <td>Followers</td>
+              <td class="likes">Likes</td>
+              <td class="photo">Photos</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Mohak Goel</a>.
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Mohak Goel</a>.
+    </div>
   </div>
 </body>
 
